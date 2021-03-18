@@ -1,0 +1,7 @@
+{
+  "name": "dochealth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
