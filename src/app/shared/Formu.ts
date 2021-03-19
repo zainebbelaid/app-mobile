@@ -1,0 +1,30 @@
+export class Formu {
+    $key: string;
+    nom: string;
+    pernom: string;
+    daten: number;
+    adresse: string;
+    email: string;
+    taille: string;
+    poids: string;
+    alrgone: string;
+    alrgtow: string;
+    alrgtree: string;
+    alrgfour: string;
+    alrgfive: string;
+    alrgsix: string;
+    alrgseven: string;
+    rgmone: string;
+    rgmtow: string;
+    rgmtree: string;
+    rgmfour: string;
+    sondeone: string;
+    sondetow: string;
+    sondetree: string;
+    sondefour: string;
+    proone: string;
+    protow: string;
+    protree: string;
+    profour: string;
+    Trpsy:string; 
+}

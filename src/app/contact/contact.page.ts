@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Formu } from '../shared/Formu';
-import { FormuService } from './../shared/formu.service';
+import { Appointment } from '../shared/Appointment';
+import { AppointmentService } from './../shared/appointment.service';
+
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-contact',
+  templateUrl: './contact.page.html',
+  styleUrls: ['./contact.page.scss'],
 })
-export class HomePage implements OnInit {
+export class ContactPage implements OnInit {
+
   Bookings = [];
 
   constructor(
-    private aptService: FormuService
+    private aptService: AppointmentService
   ) { }
 
   ngOnInit() {
@@ -21,7 +23,7 @@ export class HomePage implements OnInit {
       res.forEach(item => {
         let a = item.payload.toJSON();
         a['$key'] = item.key;
-        this.Bookings.push(a as Formu);
+        this.Bookings.push(a as Appointment);
       })
     })
   }

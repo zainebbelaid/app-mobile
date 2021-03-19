@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="bordered">
+        <ion-menu-button menu="main-menu">
+        </ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title><h1>contact</h1></ion-title>
+  </ion-toolbar>
+</ion-header>  
+ 
+<ion-content>
+  <br>
+  
+      <h2 style="color: #000000;
+      text-align: center;">  mes contacts</h2>
+   <br>
+  <ion-list class="ios list-ios hydrated">
+  
+    <ion-item *ngFor="let booking of Bookings" class="user-list">
+      <ion-label>
+        <h5 style="color: #8e8282;">
+          <ion-icon name="person" style="font-size: 150%;"></ion-icon> {{booking.structure}} {{booking.name}}
+        </h5>
+        <p >
+          <ion-icon name="call" style="font-size: 100%;"></ion-icon> {{booking.portable}}
+        </p>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/edit-appointment/', booking.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteBooking(booking.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+    
+    <ion-fab vertical="center" type="submit" routerLink="/make-appointment"  horizontal="end" slot="fixed"  >
+      <br> <br><br><br> <br><br><br><br><br><br><br>
+      <ion-fab-button>       
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+  
+  

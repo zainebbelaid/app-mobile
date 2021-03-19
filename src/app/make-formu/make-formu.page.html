@@ -1,0 +1,212 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated" color="secondary">
+        <ion-title style="text-align: center;
+        font-size: 129%;" class="ios title-ios hydrated">Création du compt</ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content [fullscreen]="true"> 
+
+  <ion-list lines="full">
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+    
+      <br> <br>
+<ion-item> 
+  <ion-avatar slot="start">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku-od42ZteMyr_3cjSqJwhjGCSF2X9CjOWQ&usqp=CAU">
+  </ion-avatar>
+  <ion-label style="color:#5fa8e4" >Ajouter</ion-label>
+</ion-item>
+
+       <ion-item>
+          <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="nom" placeholder="*Nom" required="required" ></ion-input>
+       </ion-item>
+
+ 
+       <ion-item>
+          <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="pernom" placeholder="*Prenom" required="required" ></ion-input>
+       </ion-item>
+ 
+
+       <ion-item>
+        <ion-label style="font-size: 18px; color: #847d7d; font-weight: 550;">*Date de naissance</ion-label>
+        <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" style="font-size: 16px;color: #5fa8e4;" formControlName="daten" required="required"></ion-datetime>
+       </ion-item>
+       
+       <ion-item></ion-item>
+  
+        <ion-item>
+          <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="adresse" placeholder="Adresse"  ></ion-input>
+        </ion-item>
+       
+    
+        <ion-item>
+          <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="email" placeholder="*Email" required="required" ></ion-input>
+        </ion-item>
+        
+        <ion-item style="    color: crimson;
+        font-size: 113%;
+        font-weight: 500;">Remplir mon dossier santé</ion-item>
+
+
+        <ion-item>
+          <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="taille" placeholder="Taille"  ></ion-input>
+        </ion-item>
+      
+
+        <ion-item>
+          <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="poids" placeholder="Poids"  ></ion-input>
+        </ion-item>
+          
+        <ion-item></ion-item>
+
+        <ion-item color="secondary">
+          <ion-label style="font-size: 18px; font-family: initial;">
+            ALLERGIES
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label  style=" color: #216c88;font-size: 19px; font-weight: 550;">Médicaments</ion-label>
+         <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="alrgone" placeholder="Allergie à"  ></ion-input>
+        </ion-item>
+        
+
+          <ion-item>
+            <ion-label style=" color: #216c88;font-size: 19px; font-weight: 550;">Asthme</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="alrgtow" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+          
+
+          <ion-item>
+            <ion-label  style="color: #216c88; font-size: 19px;  font-weight: 550;">Peau,Eczema...</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="alrgtree" placeholder="Allergie à"  ></ion-input>
+          </ion-item>    
+  
+          <ion-item>
+            <ion-label  style=" color: #216c88; font-size: 19px;  font-weight: 550;">Aliments</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="alrgfour" placeholder="Allergie à"  ></ion-input>
+          </ion-item>  
+
+          <ion-item>
+            <ion-label  style=" color: #216c88; font-size: 19px;  font-weight: 550;">Insectes</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="alrgfive" placeholder="Allergie à"  ></ion-input>
+          </ion-item> 
+          
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Rhume des foins</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="alrgsix" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Autres</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="alrgseven" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+      
+          <ion-item></ion-item>
+ 
+          <ion-item color="secondary">
+            <ion-label style="font-size: 18px; font-family: initial;">
+              REGIME
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Sans sel</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="rgmone" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Sans sucre</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="rgmtow" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Faible en protéines</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="rgmtree" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Autre</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="rgmfour" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item></ion-item>
+
+          <ion-item color="secondary">
+            <ion-label style="font-size: 18px; font-family: initial;">
+              SANDES
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">A oxygéne</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="sondeone" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Gastrique</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="sondetow" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Trachéotomie</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="sondetree" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Autre</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="sondefour" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+
+          <ion-item></ion-item>
+          
+          <ion-item color="secondary">
+            <ion-label style="font-size: 18px; font-family: initial;">
+              PROTHESES
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Dentaires</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="proone" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Auditives</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="protow" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Lunettes/Lentilles</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="protree" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label   style=" color: #216c88; font-size: 19px; font-weight: 550;">Autre</ion-label>
+            <ion-input style="font-size: 18px; color: #847d7d; font-weight: 550;" formControlName="profour" placeholder="Allergie à"  ></ion-input>
+          </ion-item>
+    
+          
+
+          <ion-item></ion-item>
+          
+
+          <ion-item>
+            <ion-label style="color:#5fa8e4 ;font-size: 18px;">* Ces champs sont obligatoires</ion-label>
+          </ion-item>
+          <br>
+
+
+      <ion-row>
+        
+          <ion-button  style="padding-left: 24%;
+          font-size: 20px;
+          font-family: initial;" type="submit"routerLink="/home" color="secondary" >Valider</ion-button>
+        
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
+ 

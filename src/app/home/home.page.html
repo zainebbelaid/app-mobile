@@ -1,20 +1,39 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button class="bordered">
+        <ion-menu-button menu="main-menu">
+        </ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title><h1>Compte</h1></ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> 
+ 
+<ion-content>
+  <ion-list class="ios list-ios hydrated">
+  
+    <ion-item *ngFor="let booking of Bookings" class="user-list">
+      <ion-label>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{booking.nom}}
+        </h5>
+        <p>
+           {{booking.pernom}}
+        </p>
+      </ion-label>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/edit-formu/', booking.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteBooking(booking.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    
+
+  </ion-list>
 </ion-content>

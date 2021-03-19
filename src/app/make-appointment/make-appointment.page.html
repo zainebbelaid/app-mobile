@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+     <ion-buttons slot="start"> <ion-back-button defaultHref='contact'></ion-back-button> 
+        <ion-title color="" class="ios title-ios hydrated">Nouveau contact</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content> 
+  <ion-list lines="full">
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+    
+      <ion-item> 
+        <ion-avatar slot="start">
+          <img src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png">
+        </ion-avatar>
+        <ion-label style="color:rgb(22, 2, 114);font-weight: 550;" >Ajouter</ion-label>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input  style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;" placeholder="Nom ou Libille" required="required"  formControlName="name" type="text" ></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;" placeholder="Prénom" required="required"  formControlName="prenom" type="text" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;" required="required" placeholder="Dentiste/psychiatre.." formControlName="structure" type="text" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;"  required="required" placeholder=" Fix  +2125xxxxxx" formControlName="fix" type="text" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;" required="required" placeholder=" N°télè +212xxxxxxxxx" formControlName="portable" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;"  required="required" placeholder="Fax" formControlName="fax" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;"  required="required" placeholder="Adresse" formControlName="adresse" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+       
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;" required="required" placeholder="Email" formControlName="email" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;" required="required"placeholder="Site" formControlName="site" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input style="font-size: 18px; color: rgb(22, 2, 114); font-weight: 550;" required="required"placeholder="Note"formControlName="note" type="text" >
+        </ion-input>
+      </ion-item>
+
+  <br> <br>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Enregistrer</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
